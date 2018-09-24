@@ -182,34 +182,33 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_chainStyle="spread_inside" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+    <Button
+        android:id="@+id/allOnbutton"
+        android:layout_width="65dp"
+        android:layout_height="33dp"
         android:clickable="true"
+        android:layout_marginHorizontal="20dp"
+        android:text="All On"
+        android:textSize="10sp"
         app:backgroundTint="@android:color/holo_green_light"
-        app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton"
-        app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
-        app:layout_constraintTop_toTopOf="@+id/floatingActionButton"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintBottom_toBottomOf="@+id/allOffbutton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/allOffbutton"
+        app:layout_constraintTop_toTopOf="@+id/allOffbutton"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@android:drawable/presence_online" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+    <Button
+        android:id="@id/allOffbutton"
+        android:layout_width="65dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="12dp"
         android:clickable="true"
+        android:text="All Off"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="@+id/radioButton8"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/radioButton8"
-        app:srcCompat="@android:drawable/ic_notification_clear_all" /><![CDATA[
-
-
-    "/>
-
-
-]]>
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@android:drawable/ic_notification_clear_all" />
 </android.support.constraint.ConstraintLayout>

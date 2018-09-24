@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.user.ntut_hams_control">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--接上网-->
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <!--可以write and read-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--可以拿online的 data-->
+
 
     <application
         android:allowBackup="true"
@@ -10,11 +21,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".Main2Activity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+                //这个放哪哪就是main
             </intent-filter>
+
         </activity>
     </application>
 
