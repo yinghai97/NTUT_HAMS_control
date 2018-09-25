@@ -43,7 +43,6 @@
         android:layout_centerInParent="true"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="50dp"
-        android:visibility="invisible"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
         tools:layout_editor_absoluteX="30dp">
 
@@ -59,7 +58,7 @@
 
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/UsernameET"
             android:layout_width="match_parent"
             android:layout_height="27dp"
             android:layout_marginEnd="8dp"
@@ -81,7 +80,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/PasswordET"
             android:layout_width="match_parent"
             android:layout_height="27dp"
             android:layout_marginBottom="8dp"
@@ -97,6 +96,7 @@
             android:hint="Password"
             android:inputType="textPassword"
             android:lines="@android:integer/config_longAnimTime"
+            android:maxEms="12"
             android:singleLine="true"
             android:soundEffectsEnabled="true"
             android:textColor="#ffffff"
@@ -107,7 +107,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText"
+            app:layout_constraintTop_toBottomOf="@+id/UsernameET"
             app:layout_constraintVertical_bias="0.076" />
 
         <Button
@@ -131,10 +131,10 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="2dp"
             android:src="#ffffff"
-            app:layout_constraintEnd_toEndOf="@+id/editText"
+            app:layout_constraintEnd_toEndOf="@+id/UsernameET"
             app:layout_constraintHorizontal_bias="0.476"
-            app:layout_constraintStart_toStartOf="@+id/editText"
-            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+            app:layout_constraintStart_toStartOf="@+id/UsernameET"
+            app:layout_constraintTop_toBottomOf="@+id/PasswordET" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -144,10 +144,10 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="2dp"
             android:src="#ffffff"
-            app:layout_constraintEnd_toEndOf="@+id/editText"
+            app:layout_constraintEnd_toEndOf="@+id/UsernameET"
             app:layout_constraintHorizontal_bias="0.476"
-            app:layout_constraintStart_toStartOf="@+id/editText"
-            app:layout_constraintTop_toBottomOf="@+id/editText" />
+            app:layout_constraintStart_toStartOf="@+id/UsernameET"
+            app:layout_constraintTop_toBottomOf="@+id/UsernameET" />
 
 
     </android.support.constraint.ConstraintLayout>
@@ -170,12 +170,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintVertical_bias="0.6"
+        android:visibility="invisible"/>
 
-    <Button
-        android:id="@+id/testbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
 
 
 </android.support.constraint.ConstraintLayout>
