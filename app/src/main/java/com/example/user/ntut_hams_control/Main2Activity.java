@@ -10,11 +10,14 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import retrofit2.Call;
+
 public class Main2Activity extends AppCompatActivity implements View.OnClickListener {
     private ConstraintLayout accountLayout,registerLayout;
     private ProgressBar loadingBar;
     private EditText UsernameET,PasswordET,RUsernameET,RPasswordET,RRePasswordET;
     private Button Rregister,register,Loginbutton;
+    private static  Apilnterface apilnterface;
 
 
 
@@ -41,6 +44,9 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         RUsernameET = findViewById(R.id.RUsernameET);
         RPasswordET = findViewById(R.id.RpasswordET);
         RRePasswordET = findViewById(R.id.RRepassword);
+//        apilnterface = ApiClient.getApiClient().create(Apilnterface.class);
+
+
 
 
 
@@ -58,8 +64,9 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
             String rusername = RUsernameET.getText().toString();
             String rpassword = RPasswordET.getText().toString();
             String rrepassword = RRePasswordET.getText().toString();
-            if (rpassword == rrepassword) {
-                loadingBar.setVisibility(View.VISIBLE);
+            if (rpassword.equals(rrepassword)) {
+//                Call<User> call= Main2Activity.apilnterface.performRegistration(rusername,rpassword,rrepassword);
+//                loadingBar.setVisibility(View.VISIBLE);
                 accountLayout.setVisibility(View.VISIBLE);
                 registerLayout.setVisibility(View.INVISIBLE);
             } else {
