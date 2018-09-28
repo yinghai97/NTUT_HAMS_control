@@ -4,15 +4,11 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
-public class Apilnterface {
-    @GET("conn.php")
-    Call<User> performRegistration(@Query("name") String Name, @Query("user_name") String Username, @Query("user_password") String Userpassword) {
-        return null;
-    }
+public interface Apilnterface {
+    @GET("Registeryh.php")
+    Call<User> performRegistration(@Query("name") String Name,@Query("surname") String Surname, @Query("user_name") String Username, @Query("user_pass") String Userpassword) ;
 
-    @GET("mysqlyo.php")
-    Call<User> performUserLogin(@Query("user_name") String Username, @Query("user_password") String Userpassword) {
-        return null;
-    }
+    @GET("Loginyh.php")
+    Call<User> performUserLogin(@Query("user_name") String Username, @Query("user_pass") String Userpassword) ;
 
 }
